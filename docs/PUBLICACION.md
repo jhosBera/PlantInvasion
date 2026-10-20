@@ -17,6 +17,21 @@ Las siguientes actualizaciones enviadas a `main` se publicarán mediante la inte
 
 ## Dominio de Namecheap
 
+El subdominio elegido es **plantinvasion.beraun.space** (dominio base: `beraun.space`). Las mayúsculas no cambian un nombre DNS.
+
+En Vercel agrega `plantinvasion.beraun.space` en Settings → Domains del proyecto. Si los servidores DNS de `beraun.space` están gestionados por Namecheap, añade en Advanced DNS → Host Records:
+
+| Campo | Valor |
+| --- | --- |
+| Type | CNAME Record, si es el tipo indicado por Vercel |
+| Host | `plantinvasion` |
+| Value / Target | El destino exacto mostrado por Vercel para este proyecto; pendiente de obtener |
+| TTL | Automatic |
+
+No pongas `plantinvasion.beraun.space` completo en el campo Host de Namecheap, que añade el dominio base. No uses una IP ni un destino de ejemplo. Si Vercel pide un registro TXT de verificación, añade también los valores que indique. Mantén los registros de `@`, `www` y correo.
+
+Esta documentación prepara la conexión; no confirma que el proyecto esté desplegado ni que los registros DNS se hayan aplicado. La consulta DNS desde el entorno no pudo completarse, por lo que no se ha determinado si ya existen registros para ese subdominio.
+
 No necesitas transferir el dominio ni contratar otro alojamiento.
 
 1. En el proyecto de Vercel abre Settings → Domains y agrega el dominio o subdominio elegido.
